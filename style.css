@@ -1,0 +1,485 @@
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    color: white;
+    background: navy;
+    z-index: 3;
+}
+
+nav .brand {
+    float: left;
+    margin: 15px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+nav>ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav>ul li a:hover {
+    background-color: white;
+    color: red;
+    padding: 10px;
+}
+
+
+#parallex-image {
+    position: relative;
+    background-image: url("./assets/building1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    filter: opacity(80%);
+}
+
+.banner-center {
+    position: absolute;
+    bottom: -5vw;
+    left: 25vw;
+    display: flex;
+    justify-content: stretch;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50vw;
+    height: 450px;
+}
+
+.banner-center>.banner-image {
+    background: url("./assets/coder.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 24vw;
+    height: 370px;
+}
+
+.banner-details {
+    width: 25vw;
+    background-color: bisque;
+    padding: 10px 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    width: 49vw;
+    background: blue;
+}
+
+.social-links ul li,
+i {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.social-links a {
+    color: aliceblue;
+    padding: 30px;
+}
+
+.About-me {
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(223, 212, 207);
+    color: black;
+    height: 566px;
+    z-index: -1;
+    width: 100%;
+
+}
+
+.About-me>div {
+    width: 50%;
+    text-align: center;
+}
+
+.About-me p {
+    font-size: 22px;
+}
+
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0px;
+    left: 37.5em !important;
+    margin-left: -3px;
+}
+
+/* Container around content */
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 200px;
+}
+
+/* The circles on the timeline */
+
+.container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 587px;
+    background-color: white;
+    border: 4px solid #ff9f55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+
+.right {
+    left: 55%;
+}
+
+/* Add arrows to the left container (pointing right) */
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 650px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+
+.right::after {
+    left: -73px;
+}
+
+/* The actual content */
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    width: 45%;
+}
+
+.bg-set {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#Experience {
+    position: relative;
+    bottom: 280px;
+}
+
+#Experience .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    width: 40%;
+    left: 3.6em;
+}
+
+#Experience>.exp-backimage {
+    opacity: 0.6;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    top: 400px;
+    min-height: 500px;
+    background: url(./assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.exp-content {
+    position: relative;
+    bottom: 187px;
+}
+
+#Education {
+    position: relative;
+    background-color: rgba(221, 218, 210, 0.9);
+    bottom: 13em;
+}
+
+#Experience>div>h4,
+#Education>h3,
+#Certification>h4 {
+    margin-top: 50px;
+    text-align: center;
+    color: navy;
+}
+
+#Certification {
+    position: relative;
+    bottom: 160px;
+
+    background: url(./assets/BUILDING.jfif);
+    background-position: center;
+    min-height: 800px;
+    backdrop-filter: opacity(20%);
+}
+
+#Experience hr,
+#Certification>hr,
+#Education>hr {
+    width: 100%;
+    color: white;
+    z-index: 1;
+}
+
+.exp-list {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    background-color: antiquewhite;
+    opacity: 0.8;
+}
+
+.exp-list>.exp {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 3px solid green; */
+    min-height: 600px;
+}
+
+.exp>.place,
+.exp>.duration {
+    /* border: 2px solid red; */
+    width: 45%;
+}
+
+#skill-background {
+    opacity: 0.4;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+    background: url(./assets/BUILDING.jfif);
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#SKILLS {
+    position: relative;
+    bottom: 12em;
+}
+
+#SKILLS>.skill-content {
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    background: rgba(185, 76, 76, 0.4);
+    border-radius: 30px;
+    text-align: left;
+    z-index: 2;
+    position: absolute;
+    top: 150px;
+    left: 350px;
+}
+
+.skill-progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+input[type="range"] {
+    min-width: 300px;
+
+    margin: 2px;
+}
+
+#SKILLS>div>h3 {
+    padding: 30px;
+    opacity: 1;
+    font-family: "Cookie",
+        cursive;
+}
+
+#SKILLS>div>H1 {
+    text-align: center;
+}
+
+#Contact {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0px 20px;
+    background-color: antiquewhite;
+    padding: 50px;
+
+}
+
+input[type=text],
+input[type=email],
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container-2 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-right: 200px;
+}
+
+footer {
+    background-color: cadetblue;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* testing lines */
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+@media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
