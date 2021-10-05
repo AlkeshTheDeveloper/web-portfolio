@@ -1,4 +1,4 @@
-# Web Portfolio v2.0
+# Web Portfolio
 
 ## About project:
  The idea of this project is to showcase the skills online instead of hard copy by using web portfolio.It is the static version
